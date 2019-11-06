@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <h1>自动化测试平台</h1>
+    <form action="/login/" method="POST">
+        {% if message %}
+            <div class="alert alert-warning">{{ message }}</div>
+        {% endif %}
+        {% csrf_token %}
+        <label>&nbsp;&nbsp;用户名：</label><input type="text" name="username">
+        <br>
+        <label>&nbsp;&nbsp;密 &nbsp;&nbsp; 码：</label><input type="password" name="password">
+        <br>{{ error }}<br>
+        <button type="submit">登 录</button>
+    </form>
+{% endblock %}
