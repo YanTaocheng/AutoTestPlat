@@ -139,7 +139,7 @@
           success: function (data) {
               console.log(data);//打印服务端返回的数据(调试用)
               if(data.status == "success"){
-                  //{#关闭模态框并清除框内数据，否则下次打开还是上次的数据#}
+                  //关闭模态框并清除框内数据，否则下次打开还是上次的数据
                   document.getElementById("login-form").reset();
                   $('#myModal').modal('hide');
                   //登录成功后弹窗提示
